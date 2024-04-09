@@ -12,11 +12,27 @@
 // quantity bought. No hints this time!
 //
 // No hints this time ;)
+fn main() {
+  let price1 = calculate_price_of_apples(35);
+  let price2 = calculate_price_of_apples(40);
+  let price3 = calculate_price_of_apples(41);
+  let price4 = calculate_price_of_apples(65);
 
-// I AM NOT DONE
+  println!("Price of 35 apples: {}", price1);
+  println!("Price of 40 apples: {}", price2);
+  println!("Price of 41 apples: {}", price3);
+  println!("Price of 65 apples: {}", price4);
+}
+
 
 // Put your function here!
-// fn calculate_price_of_apples {
+ fn calculate_price_of_apples(num: i32)->i32 {
+    if num > 40{
+      return num;
+    }else{
+      return num * 2;
+    }
+ }
 
 // Don't modify this function!
 #[test]
@@ -25,7 +41,10 @@ fn verify_test() {
     let price2 = calculate_price_of_apples(40);
     let price3 = calculate_price_of_apples(41);
     let price4 = calculate_price_of_apples(65);
-
+    println!("price1:{}",price1);
+    println!("price2:{}",price2);
+    println!("price3:{}",price3);
+    println!("price4:{}",price4);
     assert_eq!(70, price1);
     assert_eq!(80, price2);
     assert_eq!(41, price3);
